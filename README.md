@@ -1,5 +1,25 @@
-# Vue 3 + Vite
+# E-Commerce Platform
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A complete Vue.js e-commerce solution with product browsing, cart functionality, checkout process, and user account management.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Features
+
+- Product catalog with categories
+- Shopping cart system
+- Multi-step checkout
+- Order tracking
+- User account management
+- Admin product management
+
+## Technologies
+
+- Vue.js 3
+- Pinia (state management)
+- Vue Router
+- Axios (HTTP client)
+- CSS3 (responsive design)
+
+## Project Setup
+
+```sh
+npm install
