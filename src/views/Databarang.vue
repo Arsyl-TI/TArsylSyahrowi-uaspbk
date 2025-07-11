@@ -102,7 +102,7 @@ export default {
       errors: {},
       loading: false,
       isEdit: false,
-      apiUrl: 'http://localhost:3004/barang'
+      apiUrl: 'https://fake-json-chi.vercel.app/barang'
     }
   },
   computed: {

@@ -32,7 +32,7 @@
       "email": "arsilsyahrowi@gmail.com",
       "username": "arsil",
       "password": "Terano88",
-      "balance": 0,
+      "balance": 10,
       "description": "New user",
       "avatar": "https://i.pravatar.cc/150?img=58",
       "transactions": []
@@ -44,7 +44,7 @@
       "kode": "BRG001",
       "nama": "Laptop ASUS",
       "harga": 8500000,
-      "stok": 17,
+      "stok": 16,
       "kategori": "Elektronik"
     },
     {

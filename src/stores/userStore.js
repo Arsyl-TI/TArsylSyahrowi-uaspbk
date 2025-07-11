@@ -9,7 +9,7 @@ export const useUserStore = defineStore('user', () => {
 
   const register = async (userData) => {
     try {
-      const response = await axios.post('http://localhost:3004/users', userData)
+      const response = await axios.post('https://fake-json-chi.vercel.app/users', userData)
       user.value = response.data
       isAuthenticated.value = true
       return response.data
@@ -20,7 +20,7 @@ export const useUserStore = defineStore('user', () => {
 
   const login = async (credentials) => {
     try {
-      const { data } = await axios.get('http://localhost:3004/users')
+      const { data } = await axios.get('https://fake-json-chi.vercel.app/users')
       const foundUser = data.find(u => 
         u.email === credentials.email && 
         u.password === credentials.password
@@ -45,7 +45,7 @@ export const useUserStore = defineStore('user', () => {
 
   const updateUser = async (userData) => {
     try {
-      const response = await axios.patch(`http://localhost:3004/users/${user.value.id}`, userData)
+      const response = await axios.patch(`https://fake-json-chi.vercel.app/users/${user.value.id}`, userData)
       user.value = { ...user.value, ...response.data } // Update local state
       return true
     } catch (error) {
@@ -70,7 +70,7 @@ export const useUserStore = defineStore('user', () => {
       await updateUser({ balance: newBalance })
       
       // Add transaction reference to user
-      const updatedUser = await axios.patch(`http://localhost:3004/users/${user.value.id}`, {
+      const updatedUser = await axios.patch(`https://fake-json-chi.vercel.app/users/${user.value.id}`, {
         transactions: [...user.value.transactions, newTransaction.id]
       })
       
