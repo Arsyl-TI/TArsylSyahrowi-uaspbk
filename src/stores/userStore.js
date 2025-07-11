@@ -3,13 +3,15 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import axios from 'axios'
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3004'
+
 export const useUserStore = defineStore('user', () => {
   const user = ref(null)
   const isAuthenticated = ref(false)
 
   const register = async (userData) => {
     try {
-      const response = await axios.post('http://localhost:3004/users', userData)
+      const response = await axios.post(`${API_BASE_URL}/users`, userData)
       user.value = response.data
       isAuthenticated.value = true
       return response.data
@@ -20,7 +22,7 @@ export const useUserStore = defineStore('user', () => {
 
   const login = async (credentials) => {
     try {
-      const { data } = await axios.get('http://localhost:3004/users')
+      const { data } = await axios.get(`${API_BASE_URL}/users`)
       const foundUser = data.find(u => 
         u.email === credentials.email && 
         u.password === credentials.password
@@ -45,7 +47,7 @@ export const useUserStore = defineStore('user', () => {
 
   const updateUser = async (userData) => {
     try {
-      const response = await axios.patch(`http://localhost:3004/users/${user.value.id}`, userData)
+      const response = await axios.patch(`${API_BASE_URL}/users/${user.value.id}`, userData)
       user.value = { ...user.value, ...response.data } // Update local state
       return true
     } catch (error) {
@@ -70,7 +72,7 @@ export const useUserStore = defineStore('user', () => {
       await updateUser({ balance: newBalance })
       
       // Add transaction reference to user
-      const updatedUser = await axios.patch(`http://localhost:3004/users/${user.value.id}`, {
+      const updatedUser = await axios.patch(`${API_BASE_URL}/users/${user.value.id}`, {
         transactions: [...user.value.transactions, newTransaction.id]
       })
       

@@ -1,0 +1,75 @@
+{
+  "transactions": [
+    {
+      "id": "1",
+      "items": [
+        {
+          "id": 101,
+          "name": "Product A",
+          "price": 100000,
+          "quantity": 2
+        }
+      ],
+      "total": 200000,
+      "status": "completed",
+      "shipping": {
+        "address": "Jl. Contoh No. 123",
+        "city": "Jakarta"
+      },
+      "payment": {
+        "method": "credit_card",
+        "amount": 200000
+      },
+      "createdAt": "2023-06-01T10:30:00Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "1341",
+      "name": "arsil syahrowi",
+      "firstName": "arsil",
+      "lastName": "syahrowi",
+      "email": "arsilsyahrowi@gmail.com",
+      "username": "arsil",
+      "password": "Terano88",
+      "balance": 10,
+      "description": "New user",
+      "avatar": "https://i.pravatar.cc/150?img=58",
+      "transactions": []
+    }
+  ],
+  "barang": [
+    {
+      "id": "1",
+      "kode": "BRG001",
+      "nama": "Laptop ASUS",
+      "harga": 8500000,
+      "stok": 16,
+      "kategori": "Elektronik"
+    },
+    {
+      "id": "2",
+      "kode": "BRG002",
+      "nama": "Meja Kerja",
+      "harga": 1200000,
+      "stok": 10,
+      "kategori": "Furniture"
+    },
+    {
+      "id": "4",
+      "kode": "BRG003",
+      "nama": "samsung",
+      "harga": 2500000,
+      "stok": 15,
+      "kategori": "Smartphone"
+    },
+    {
+      "id": "5",
+      "kode": "BRG004",
+      "nama": "monitor philips",
+      "harga": 900000,
+      "stok": 7,
+      "kategori": "Elektronik"
+    }
+  ]
+}
