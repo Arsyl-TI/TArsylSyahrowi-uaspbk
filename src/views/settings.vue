@@ -98,7 +98,7 @@ export default {
         }
         
         // Update di JSON server
-        const response = await axios.patch(`http://localhost:3004/users/${userStore.user.id}`, userData)
+        const response = await axios.patch(`https://fake-json-chi.vercel.app/users/${userStore.user.id}`, userData)
         
         // Update di userStore
         await userStore.updateUser(response.data)
