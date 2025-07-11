@@ -20,7 +20,7 @@ export const useUserStore = defineStore('user', () => {
 
   const login = async (credentials) => {
     try {
-      const { data } = await axios.get(`https://fake-json-chi.vercel.app/users/users`)
+      const { data } = await axios.get(`https://fake-json-chi.vercel.app/users`)
       const foundUser = data.find(u => 
         u.email === credentials.email && 
         u.password === credentials.password
